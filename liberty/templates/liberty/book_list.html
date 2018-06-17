@@ -1,0 +1,24 @@
+{% extends 'liberty/layout.html' %}
+
+
+{% block content %}
+<div class="row">
+
+    {% for book in books %}
+  <div class="col-sm-2">
+        <div class="card">
+          <div class="card-header">
+           {{book.title}}
+          </div>
+            <img class="card-img-top img-responsive" src="{{book.photo}}" >
+          <div class="card-body">
+            <p class="card-text">{{book.description}}</p>
+            <a href="{{book.book_file}}" class="btn btn-primary">Скачати</a>
+          </div>
+        </div>
+        </div>
+
+    {% endfor %}
+            </div>
+
+{% endblock %}
